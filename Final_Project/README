@@ -1,0 +1,39 @@
+Project contains all the 6 algorithms implemented:
+
+main.py
+Simple Perceptron using tfidf dataset
+Averaged Perceptron using tfidf dataset
+
+decision_trees.py
+id3 algorithm using tfidf dataset
+
+svm_logistic.py
+SVM stochastic gradient descent using tfidf dataset
+Logistic Regression using tfidf dataset
+
+external_libraries.py
+Used the Random Forests algorithm using sklearn using tfidf dataset
+
+common_utils.py
+Contains generic method used by different files
+
+TreeNode.py
+Node structure for decision trees implementation
+
+How to run the files:
+Each .py file has its own main method and hence, they can be run individually.
+Ex: python3 decision_trees.py
+Running ./run.sh runs all the python files containing the submissions.
+
+Few points:
+1. Each .py running the algorithms, first looks for the processed file in preprocessed_data folder.
+2. If its not there, then it processes data files from the project_data folder and creates the processed files and stores it in preprocessed_data folder.
+
+3. I have commented out the cross validation code because it takes a long time to run.
+I ran it once to find the hyper parameters and then hardcoded them when calling the algorithms.
+If you wish to see the cross validation, then uncomment the specific parts.
+Cross validation is done in main.py and svm_logistic.py files containing 2 perceptron, 1 logistic and 1 SVM GD algorithms.
+
+4. Each of the algorithm creates a .csv file that contains the results for Kaggle uploads
+5. run.sh takes around 30 minutes to complete when there are no processed files generated in preprocessed_data folder
+It takes around 15 minutes to complete when the processed files are already present in preprocessed_data folder
