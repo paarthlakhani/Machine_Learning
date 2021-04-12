@@ -1,0 +1,4 @@
+Run the run.sh file on CADE machine as:
+./run.sh
+
+Remember to give permissions to this file as chmod u+x run.sh
